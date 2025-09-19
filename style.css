@@ -1,0 +1,591 @@
+/* Общие стили */
+:root {
+    --primary-color: #2c3e50;
+  /* Главная секция */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0;
+    color: white;
+    overflow: hidden;
+}color: #3498db;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --spacing: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    margin-bottom: var(--spacing);
+    color: var(--primary-color);
+}
+
+/* Шапка сайта */
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--secondary-color);
+}
+
+/* Главная секция */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('teh-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Секции */
+.section {
+    padding: 5rem 0;
+}
+
+.section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+/* Секция "Обо мне" */
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr;
+    gap: var(--spacing);
+    align-items: start;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text {
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-intro {
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+
+.about-qualification {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.about-experience {
+    font-weight: 500;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Образование */
+.education-list {
+    list-style: none;
+}
+
+.education-list li {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-list li:hover {
+    transform: translateY(-5px);
+}
+
+.education-list h3 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+}
+
+.education-year {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.education-degree {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.education-qualification {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+}
+
+.education-details {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.education-details p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* Опыт работы */
+.experience-timeline {
+    position: relative;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Достижения */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing);
+}
+
+.achievement-item {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Преподаваемые дисциплины */
+.disciplines-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.discipline-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.discipline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.discipline-item h3 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.discipline-details {
+    margin-top: 0.8rem;
+}
+
+.discipline-details p {
+    color: var(--text-color);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.discipline-details p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .disciplines-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Публикации */
+.publications-list {
+    display: grid;
+    gap: var(--spacing);
+}
+
+.publication-item {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+}
+
+.publication-item h3 {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+}
+
+.publication-description {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.publication-date {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.publication-actions {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.download-link .icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Контакты */
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+/* Подвал */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Адаптивность */
+/* Планшеты */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .disciplines-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+
+    .about-content {
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    /* Навигация */
+    .header {
+        padding: 0.5rem 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    /* Главная секция */
+    .hero-section {
+        padding: 80px 0 40px;
+        min-height: auto;
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    /* Секция "Обо мне" */
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    /* Секции */
+    .section {
+        padding: 3rem 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Дисциплины */
+    .disciplines-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .discipline-item {
+        padding: 1.2rem;
+    }
+
+    .discipline-item h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Образование */
+    .education-list li {
+        padding: 1.2rem;
+    }
+
+    .education-main {
+        font-size: 0.95rem;
+    }
+
+    /* Публикации */
+    .publication-item {
+        padding: 1.2rem;
+    }
+
+    .publication-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .download-link {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Контакты */
+    .contact-info {
+        padding: 1.2rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Маленькие мобильные устройства */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .discipline-item,
+    .education-list li,
+    .publication-item {
+        padding: 1rem;
+    }
+
+    .discipline-details p,
+    .education-details p {
+        font-size: 0.9rem;
+    }
+}
